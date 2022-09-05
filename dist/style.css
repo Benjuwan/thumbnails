@@ -12,7 +12,6 @@
 }
 .ThumbnailWrapper ul li {
   width: 48%;
-  height: clamp(80px, calc(100vw/16), 160px);
   margin-bottom: 2%;
   background-color: gray;
   cursor: pointer;
@@ -20,19 +19,14 @@
   justify-content: center;
   align-items: center;
 }
-.ThumbnailWrapper ul li .hoverAction {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: darkgray;
-}
-.ThumbnailWrapper ul li:hover .hoverAction {
-  transition: opacity 0.5s, transform 0.5s;
-  opacity: 0.8;
-  transform: scale(1.25);
-}
-.ThumbnailWrapper ul li:not(:nth-of-type(even)) {
+.ThumbnailWrapper ul li p {
   margin: 0;
+}
+.ThumbnailWrapper ul li p img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 .ThumbnailWrapper ul li .contents {
   width: 100%;
@@ -69,21 +63,9 @@
   .ThumbnailWrapper ul li {
     width: 32%;
   }
-  .ThumbnailWrapper ul li:not(:nth-of-type(even)) {
-    margin-bottom: 2%;
-  }
-  .ThumbnailWrapper ul li:not(:nth-of-type(3n + 3)) {
-    margin: 0;
-  }
 }
 @media screen and (min-width: 1025px) {
   .ThumbnailWrapper ul li {
     width: 16.6%;
-  }
-  .ThumbnailWrapper ul li:not(:nth-of-type(even)) {
-    margin: 0;
-  }
-  .ThumbnailWrapper ul li:not(:nth-of-type(5n + 5)) {
-    margin-bottom: 2%;
   }
 }
