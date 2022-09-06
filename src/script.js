@@ -1,3 +1,4 @@
+// HTMLで<li>タグを複製して使用する場合【ここから】-----
 const ItemsNum = 25; 
 const rootEl = document.querySelector('.ThumbnailWrapper');
 
@@ -7,8 +8,9 @@ const wordAry = words.split(' ');
 const thumbnailsBox = [];
 for( let i = 0; i < ItemsNum; i++ ){
   thumbnailsBox.push(`https://via.placeholder.com/640x360/0bd/fff?text=${wordAry[i]}`);
-  rootEl.querySelector('ul').insertAdjacentHTML('beforeend',`<li class="thumbnailItem"><div class="hoverAction"></div><div class="contents"><p><img src=${thumbnailsBox[i]}></p></div></li>`);
+  rootEl.querySelector('ul').insertAdjacentHTML('beforeend',`<li class="thumbnailItem"><p><img src=${thumbnailsBox[i]}></p><div class="contents"><p><img src=${thumbnailsBox[i]}></p></div></li>`);
 }
+// -----【ここまで】削除する。または「com(mac)/ctrl(windows) + /」で機能停止状態にする。
 
 const thumbnails = document.querySelectorAll('.thumbnailItem');
 thumbnails.forEach(thumbnail => {
